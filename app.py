@@ -12,8 +12,12 @@ app = Flask(__name__)
 
 @app.route("/comments")
 def comments():
-    user = {'username': 'Miguel'}
-    print render_template('index.html', title='Home', user=user)
+    user = [
+        Comment('a','1111.11.11'),
+        Comment('b','2222.22.22'),
+        Comment('c','3333.33.33')
+]
+    return render_template('index.html', title='Comments', user=user, )
 
 
 

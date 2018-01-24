@@ -12,13 +12,13 @@ class Comment(object):
             self.date
     )
 
-    # def tr(self):
-    #     """Return user as HTML table row."""
-    #     tr = "<tr>"
-    #     tr += "<td>{}</td>".format(self.text)
-    #     tr += "<td>{}</td>".format(self.date)
-    #     tr += "</tr>"
-    #     return tr
+    def tr(self):
+        """Return user as HTML table row."""
+        tr = "<tr>"
+        tr += "<td>{}</td>".format(self.text)
+        tr += "<td>{}</td>".format(self.date)
+        tr += "</tr>"
+        return tr
 
 # class ComTable(Table):
 #     text = Col('text')
