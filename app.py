@@ -1,22 +1,21 @@
+"""Flask app."""
+
 from flask import Flask
+from models import Comment
+from flask import render_template
 
 app = Flask(__name__)
 
 @app.route("/")
-def index():
-    """Home route handler."""
-    page = """
-    <!DOCTYPE html>
-    <html>
+# def index():
+#     print "Welcome!"
 
-    <head>
-    </head>
+@app.route("/comments")
+def comments():
+    user = {'username': 'Miguel'}
+    print render_template('index.html', title='Home', user=user)
 
-    <body>
-    <h1>Wecome!</h1>
-        {}
-    </body>
 
-    </html>
-    """
-    return page.format(table)
+
+# @app.route("/api/v1.0/comments")
+# def api_comments
