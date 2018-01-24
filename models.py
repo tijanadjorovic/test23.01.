@@ -1,5 +1,6 @@
 """Models."""
 
+
 class Comment(object):
     def __init__(self, text, date):
         self.text = text
