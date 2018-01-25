@@ -1,21 +1,27 @@
-
+<!DOCTYPE html>
 <html>
-    <head>
-        <title>{{ title }} </title>
-    </head>
-    <body>
-        <table>
-           <!--  <tr>
-                <td></td>
-                <td></td> 
-                <td></td>
-            </tr>
-            <tr>
-                <td></td>
-                <td></td> 
-                <td></td>
-            </tr> -->
 
-         {{ user }} </table>
-    </body>
+<head>
+    <title>Flask Demo</title>
+</head>
+
+<body>
+    <p>Welcome!</p>
+    <p>Comments:</p>
+    <table>
+        <tr>
+            <th>TEXT</th>
+            <th>DATE</th>
+        </tr>
+        <tbody>
+            {% for comment in data %}
+            <tr>
+                <td>{{ comment.text }}</td>
+                <td>{{ comment.date }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+
 </html>
