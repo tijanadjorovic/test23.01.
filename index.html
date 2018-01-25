@@ -1,28 +1,34 @@
+<!DOCTYPE html>
 <html>
 
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
+    <title>01</title>
     <style type="text/css">
-        body{
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        label,
-        input[type='text'] {
-            margin-right: 5px;
-        }
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    label,
+    input,
+    iframe {
+        margin-right: 5px;
+    }
     </style>
 </head>
 
 <body>
-    <form method="get" action="https://www.google.com/search">
-        <label for="q">Term:</label>
-        <input type="text" name="q">
-        <input type="submit" value="Request">
+    <!-- <form action="https://www.google.com/search" target="responseFrame"> -->
+    <form action="http://127.0.0.1:5000/comments" target="responseFrame">
+        <!-- <label for="q">Term to search for:</label> -->
+        <!-- <input type="text" name="q"> -->
+        <!-- <input type="submit" value="Search"> -->
+        <input type="submit" value="Get Comments">
     </form>
+    <iframe name="responseFrame"></iframe>
 </body>
 
 </html>
